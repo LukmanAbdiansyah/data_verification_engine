@@ -83,9 +83,13 @@ Data Verificator checks whether a data repository (local drive / network share /
 
 ## 4. Installation & Distribution (End-User)
 
+### 📥 Download Installer
+
+> **[⬇ Download Seismic Deliverable AI Checker Installer (Google Drive)](https://drive.google.com/file/d/10c7P-zyslTFZ1hqeCNiCWiqVuKjJwvmm/view?usp=sharing)**
+
 ### A. Installing from Installer
 
-1. Obtain the file `Seismic Deliverable AI Checker Setup x.x.x.exe` (~258 MB)
+1. Download the installer from the link above (`Seismic Deliverable AI Checker Setup x.x.x.exe`, ~258 MB)
 2. Double-click the installer file
 3. If **Windows SmartScreen** appears (*"Windows protected your PC"*), click **More info** → **Run anyway**
 4. Choose the installation location (default is fine) → click **Install**

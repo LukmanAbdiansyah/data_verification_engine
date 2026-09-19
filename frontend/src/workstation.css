@@ -1,0 +1,107 @@
+/* Shared workstation tokens; colors follow the existing theme switch. */
+:root {
+  --dv-blue: #2563eb;
+  --dv-blue-soft: #eef4ff;
+  --dv-green: #047857;
+  --dv-green-soft: #ecfdf5;
+  --dv-purple: #7c3aed;
+  --dv-purple-soft: #f5f3ff;
+  --dv-orange: #b86800;
+  --dv-orange-soft: #fff7e8;
+}
+.dark {
+  --dv-blue: #82b1ff;
+  --dv-blue-soft: #172a49;
+  --dv-green: #6ee7b7;
+  --dv-green-soft: #12362d;
+  --dv-purple: #c4b5fd;
+  --dv-purple-soft: #30224b;
+  --dv-orange: #fbbf24;
+  --dv-orange-soft: #392b17;
+}
+@layer base {
+  * { border-color: hsl(var(--border)); }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), a { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--dv-blue); outline-offset: 3px; }
+  .font-mono { font-family: 'IBM Plex Mono', 'Cascadia Code', Consolas, monospace; }
+}
+@layer components {
+  .app-workspace { scrollbar-gutter: stable; }
+  .catalog-header { min-height: 120px; padding: 4px 0 12px; }
+  .catalog-landscape { width: 49%; height: 158px; right: -12px; bottom: -15px; object-fit: cover; object-position: right; opacity: .38; z-index: -1; mask-image: linear-gradient(to right, transparent, black 40%); }
+  .catalog-contours { right: 18%; top: -50px; width: 400px; opacity: .09; z-index: -1; }
+  .catalog-badge { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 8px; border-radius: 5px; background: var(--module-soft, var(--dv-blue-soft)); color: var(--module-color, var(--dv-blue)); font-size: 11px; font-weight: 600; }
+  .catalog-capabilities > div + div { border-left: 1px solid hsl(var(--border)); }
+  .generator-panel { --module-color: var(--dv-blue); --module-soft: var(--dv-blue-soft); padding: 22px; border: 1px solid hsl(var(--border)); border-top: 3px solid #2563eb; border-radius: 12px; background: hsl(var(--card)); box-shadow: 0 2px 8px rgb(15 23 42 / .035); }
+  .generator-well { --module-color: var(--dv-green); --module-soft: var(--dv-green-soft); border-top-color: #059669; }
+  .generator-icon { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 9px; color: var(--module-color); background: var(--module-soft); }
+  .generator-eyebrow { margin-bottom: 3px; color: var(--module-color); font-size: 10px; font-weight: 600; letter-spacing: .1em; }
+  .generator-title { font-size: 18px; font-weight: 650; line-height: 1.3; letter-spacing: -.025em; }
+  .generator-description { display: flex; align-items: center; gap: 12px; min-height: 152px; padding: 12px 0 16px; }
+  .generator-description > div { flex: 1; min-width: 0; }
+  .generator-description p { margin-top: 10px; color: hsl(var(--muted-foreground)); font-size: 13px; line-height: 1.65; }
+  .generator-illustration { width: 170px; height: 140px; object-fit: contain; flex-shrink: 0; opacity: .9; }
+  .generator-well .generator-illustration { width: 120px; }
+  .catalog-format-row { display: flex; align-items: center; gap: 8px; min-width: 0; min-height: 38px; padding: 8px 10px; border: 1px solid hsl(var(--border)); border-radius: 6px; background: hsl(var(--background)); font-size: 12px; }
+  .catalog-format-row > svg { flex-shrink: 0; color: var(--module-color); }
+  .catalog-format-row .font-mono { overflow-wrap: anywhere; }
+  .generator-launch { min-height: 40px; }
+  .feature-icon { padding: 10px; border-radius: 8px; flex-shrink: 0; }
+  .feature-blue { color: var(--dv-blue); background: var(--dv-blue-soft); }
+  .feature-purple { color: var(--dv-purple); background: var(--dv-purple-soft); }
+  .feature-orange { color: var(--dv-orange); background: var(--dv-orange-soft); }
+  .dark .catalog-landscape { opacity: .15; }
+  .dark .generator-illustration { opacity: .8; }
+  @media (max-width: 1599px) {
+    .generator-illustration { width: 120px; height: 108px; }
+    .generator-well .generator-illustration { width: 96px; }
+    .generator-description { min-height: 144px; }
+    .generator-panel { padding: 20px; }
+  }
+  @media (max-width: 1399px) {
+    .generator-illustration { display: none; }
+    .generator-description { min-height: 140px; }
+    .generator-title { font-size: 18px; }
+    .catalog-format-row { padding: 8px; font-size: 11px; gap: 6px; }
+  }
+  @media (max-width: 1279px) {
+    .catalog-capabilities > div:nth-child(3) { border-left: 0; }
+    .catalog-capabilities > div:nth-child(n+3) { border-top: 1px solid hsl(var(--border)); }
+    .catalog-format-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 1099px) {
+    .catalog-format-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .generator-description { min-height: auto; }
+    .catalog-landscape { opacity: .2; }
+  }
+  @media (max-width: 767px) {
+    .module-sidebar { width: 168px; }
+    .module-sidebar > div:first-child p { font-size: 11px; }
+    .module-sidebar > div:first-child p + p { display: none; }
+    .module-sidebar nav a { font-size: 12px; gap: 8px; padding-left: 8px; padding-right: 8px; }
+    .app-workspace { padding: 16px; }
+    .app-topbar { padding: 8px 12px; }
+    .topbar-module { display: none; }
+    .catalog-format-grid { grid-template-columns: 1fr; }
+    .catalog-capabilities { grid-template-columns: 1fr; }
+    .catalog-capabilities > div + div { border-left: 0; border-top: 1px solid hsl(var(--border)); }
+    .generator-launch { white-space: normal; height: auto; }
+    .catalog-landscape, .catalog-contours { display: none; }
+  }
+  @media (max-width: 580px) {
+    .module-sidebar { width: 44px; }
+    .module-sidebar > div:first-child { padding: 0; justify-content: center; }
+    .module-sidebar > div:first-child > div, .module-sidebar nav > p, .module-sidebar nav a span { display: none; }
+    .module-sidebar nav { padding: 12px 4px; }
+    .module-sidebar nav a { justify-content: center; padding: 10px 0; }
+    .app-rail { width: 56px; }
+    .app-topbar { flex-wrap: wrap; }
+    .app-workspace { padding: 12px; }
+    .generator-panel { padding: 16px; }
+    .generator-title { font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .app-rail a, .module-sidebar a, .generator-launch { transition: none; }
+  }
+}

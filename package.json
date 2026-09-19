@@ -1,0 +1,79 @@
+{
+  "name": "seismic-deliverable-checker",
+  "version": "1.0.0",
+  "description": "Seismic Deliverable AI Checker - Windows Desktop Application",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install",
+    "dev": "concurrently -n BACKEND,FRONTEND -c blue,green \"cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8005\" \"cd frontend && npm run dev\"",
+    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8005",
+    "dev:frontend": "cd frontend && npm run dev",
+    "electron:dev": "concurrently -n BACKEND,FRONTEND,ELECTRON -c blue,green,yellow \"cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8005\" \"cd frontend && npm run dev\" \"wait-on http://localhost:5176 && tsc -p tsconfig.electron.json && electron .\"",
+    "build": "cd frontend && npm run build",
+    "electron:compile": "tsc -p tsconfig.electron.json",
+    "electron:build": "npm run build && npm run electron:compile && electron-builder",
+    "test": "cd backend && python -m pytest tests/ -v",
+    "test:watch": "cd backend && python -m pytest tests/ -v --tb=short -f"
+  },
+  "keywords": ["seismic", "deliverable", "verification", "qc"],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.seismic.deliverable-checker",
+    "productName": "Seismic Deliverable AI Checker",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "win": {
+      "target": ["nsis"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Seismic Deliverable AI Checker"
+    },
+    "files": [
+      "dist-electron/**/*",
+      "frontend/dist/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": [
+          "**/*",
+          "!venv/**",
+          "!__pycache__/**",
+          "!**/__pycache__/**",
+          "!*.pyc",
+          "!**/*.pyc",
+          "!logs/**",
+          "!seismic_checker.db",
+          "!.env",
+          "!tests/**",
+          "!.pytest_cache/**"
+        ]
+      },
+      {
+        "from": "build/python-embed",
+        "to": "python",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "backend/.env.example",
+        "to": "backend/.env.example"
+      }
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "typescript": "^5.3.3",
+    "wait-on": "^7.2.0"
+  }
+}

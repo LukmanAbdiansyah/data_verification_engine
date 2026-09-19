@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520">
+  <rect x="48" y="40" width="324" height="430" rx="18" fill="#FAFCFF" stroke="#D7E5F5"/>
+  <g stroke="#DDE7F2" stroke-width="1">
+    <path d="M95 70v370M160 70v370M225 70v370M290 70v370M355 70v370"/>
+    <path d="M70 120h280M70 190h280M70 260h280M70 330h280M70 400h280"/>
+  </g>
+  <text x="86" y="62" font-family="Arial" font-size="18" fill="#334155">GR</text>
+  <text x="150" y="62" font-family="Arial" font-size="18" fill="#334155">RHOB</text>
+  <text x="220" y="62" font-family="Arial" font-size="18" fill="#334155">NPHI</text>
+  <text x="298" y="62" font-family="Arial" font-size="18" fill="#334155">DT</text>
+  <path d="M105 85c-20 24 30 32 2 60s26 33-4 61 29 36 1 64 24 35 0 68 25 41-1 70" fill="none" stroke="#16A34A" stroke-width="5"/>
+  <path d="M170 85c18 32-20 48 6 73s-16 48 7 73-15 50 5 77-11 48 5 80" fill="none" stroke="#F97316" stroke-width="5"/>
+  <path d="M238 85c-17 26 19 45-2 70s15 44-3 72 17 48-2 74 14 52-1 87" fill="none" stroke="#A855F7" stroke-width="5"/>
+  <path d="M310 85c15 30-12 47 4 71s-11 50 4 75-14 48 3 73-13 49 4 84" fill="none" stroke="#2563EB" stroke-width="5"/>
+</svg>
