@@ -85,7 +85,7 @@ Data Verificator checks whether a data repository (local drive / network share /
 
 ### 📥 Download Installer
 
-> **[⬇ Download Seismic Deliverable AI Checker Installer (Google Drive)](https://drive.google.com/file/d/10c7P-zyslTFZ1hqeCNiCWiqVuKjJwvmm/view?usp=sharing)**
+> **[⬇ Download Seismic Deliverable AI Checker Installer (Google Drive)](https://drive.google.com/file/d/1yDYT5UEQ5UJoX64dAr6aq8LpkAd3KjwX/view?usp=sharing)**
 
 ### A. Installing from Installer
 
