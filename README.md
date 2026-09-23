@@ -11,7 +11,7 @@
 
 > 📥 **Unduh Cepat:** [**⬇ Unduh Seismic Deliverable AI Checker Installer (Google Drive)**](https://drive.google.com/file/d/1yDYT5UEQ5UJoX64dAr6aq8LpkAd3KjwX/view?usp=sharing) *(Windows 64-bit, ~258 MB, siap pakai tanpa perlu instal Python/Node)*
 
-**Seismic Deliverable AI Checker & Verification Suite** (Data Verificator) adalah aplikasi desktop Windows kelas enterprise yang dirancang khusus untuk memverifikasi kelengkapan, keabsahan teknis, dan kepatuhan berkas deliverable data minyak dan gas bumi (khususnya data seismik 2D/3D dan sumur/well logs) terhadap checklist proyek, serta menghasilkan katalog metadata teknis berstandar **PPDM 3.9 (SKK Migas / Ditjen Migas)**.
+**Seismic Deliverable AI Checker & Verification Suite** (Data Verificator) adalah aplikasi desktop Windows kelas enterprise yang dirancang khusus untuk memverifikasi kelengkapan, keabsahan teknis, dan kepatuhan berkas deliverable data minyak dan gas bumi (khususnya data seismik 2D/3D dan sumur/well logs) terhadap checklist proyek, serta menghasilkan katalog metadata teknis berstandar **PPDM 3.9**.
 
 Aplikasi ini dibangun dengan prinsip:
 1. **Rule-First & Deterministic:** Format teknis divalidasi langsung dari struktur internal biner dan teks berkas (misal: Textual & Binary Header SEG-Y, header LAS, struktur OpenXML Office).
