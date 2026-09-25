@@ -7,9 +7,9 @@
 [![Electron](https://img.shields.io/badge/Desktop-Electron%2034-47848F?logo=electron)](https://www.electronjs.org)
 [![PPDM](https://img.shields.io/badge/Standard-PPDM%203.9%20Compliant-FF6F00)](https://ppdm.org)
 [![AI](https://img.shields.io/badge/AI%20Reasoning-Unsloth%20%2F%20OpenAI--Compatible-8A2BE2)](https://github.com/unslothai/unsloth)
-[![Download Installer](https://img.shields.io/badge/Download-Installer%20(.exe)-success?logo=google-drive)](https://drive.google.com/file/d/1yDYT5UEQ5UJoX64dAr6aq8LpkAd3KjwX/view?usp=sharing)
+[![Download Installer](https://img.shields.io/badge/Download-Installer%20(.exe)-success?logo=google-drive)](https://drive.google.com/file/d/1lIc06QIOyh3KhLxpo3RkCjjdv5pY_K5J/view?usp=sharing)
 
-> 📥 **Unduh Cepat:** [**⬇ Unduh Seismic Deliverable AI Checker Installer (Google Drive)**](https://drive.google.com/file/d/1yDYT5UEQ5UJoX64dAr6aq8LpkAd3KjwX/view?usp=sharing) *(Windows 64-bit, ~258 MB, siap pakai tanpa perlu instal Python/Node)*
+> 📥 **Unduh Cepat:** [**⬇ Unduh Seismic Deliverable AI Checker Installer (Google Drive)**](https://drive.google.com/file/d/1lIc06QIOyh3KhLxpo3RkCjjdv5pY_K5J/view?usp=sharing) *(Windows 64-bit, ~258 MB, siap pakai tanpa perlu instal Python/Node)*
 
 **Seismic Deliverable AI Checker & Verification Suite** (Data Verificator) adalah aplikasi desktop Windows kelas enterprise yang dirancang khusus untuk memverifikasi kelengkapan, keabsahan teknis, dan kepatuhan berkas deliverable data minyak dan gas bumi (khususnya data seismik 2D/3D dan sumur/well logs) terhadap checklist proyek, serta menghasilkan katalog metadata teknis berstandar **PPDM 3.9**.
 
